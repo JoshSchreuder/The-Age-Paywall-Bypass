@@ -1,24 +1,25 @@
 {
-    "manifest_version": 1,
     "name": "The Age Paywall Bypass",
-    "description": "This extension bypasses the Age's monthly article limit paywall.",
     "version": "1.0",
-    "permissions": [
-        "http://*theage.com.au/*",
-        "https://*theage.com.au/*"
-    ],
+    "manifest_version": 2,
+    "description": "This extension bypasses the Age's monthly article limit paywall.",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
     "background_page": "background.html",
     "content_scripts": [
         {
             "all_frames": true,
-            "js": [
-                "js/libs/jquery-2.0.3.min.js"
-                "js/bypass.js"
+            "css": [
+                "css/bypass.css"
             ],
             "matches": [
-                "http://*theage.com.au/*",
-                "https://*theage.com.au/*"
-            ]
+                "http://*.theage.com.au/*",
+                "https://*.theage.com.au/*"
+            ],
+            "run_at": "document_start"
         }
     ]
 }

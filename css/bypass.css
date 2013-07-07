@@ -1,0 +1,7 @@
+.subscription-overlay {
+    display: none !important;
+}
+
+body {
+    overflow: visible !important;
+}
