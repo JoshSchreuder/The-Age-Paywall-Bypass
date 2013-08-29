@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+.article-counter {
+    display: none !important;
+}
+
 body {
     overflow: visible !important;
 }
