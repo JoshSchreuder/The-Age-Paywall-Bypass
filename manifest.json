@@ -1,6 +1,6 @@
 {
     "name": "The Age Paywall Bypass",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "manifest_version": 2,
     "description": "This extension bypasses the Age's monthly article limit paywall.",
     "icons": {
@@ -8,7 +8,15 @@
         "48": "img/icon48.png",
         "128": "img/icon128.png"
     },
-    "background_page": "background.html",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.resources.fairfax.com.au/*"
+    ],
+    "background": {
+        "scripts": ["js/bypass.js"],
+        "persistent": true
+    },
     "content_scripts": [
         {
             "all_frames": true,
@@ -16,8 +24,7 @@
                 "css/bypass.css"
             ],
             "matches": [
-                "http://*.theage.com.au/*",
-                "https://*.theage.com.au/*"
+                "*://*.theage.com.au/*"
             ],
             "run_at": "document_start"
         }

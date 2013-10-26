@@ -9,3 +9,14 @@
 body {
     overflow: visible !important;
 }
+
+.articleBody {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+.articleBody>p,
+.articleBody>div {
+    color: #000 !important;
+    text-shadow: none !important;
+}
